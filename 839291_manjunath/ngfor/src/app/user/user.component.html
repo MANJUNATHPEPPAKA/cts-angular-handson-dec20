@@ -1,0 +1,44 @@
+<p>user works!</p>
+
+<h3>saregamapae</h3>
+
+
+
+
+
+<p>user-items works!</p>
+
+<div>
+    <h3 *ngIf="message">Messsage {{message}}</h3>
+    <h3 *ngIf="isvalid">Is valid the {{isvalid}}</h3>
+<h1>length{{cde.length}}</h1>
+
+<table border="1">
+      <tr><th>name</th><th>Age</th></tr>
+      <tr *ngFor="let user of cde">
+          <td>{{user.name}}</td>
+          <td>{{user.id}}</td>
+      </tr>
+  </table></div>
+ 
+  <div>
+  <table border="1">
+
+    <tr>
+        <th>ID:</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>State</th>
+        <th>City</th>
+    </tr>
+        <tr *ngFor="let use of usernames">
+        <td>{{use.id}}</td>
+        <td>{{use.name}}</td>
+        <td>{{use.salary}}</td>
+        <td *ngIf="use.address">{{use.address.state}}</td>
+        <td *ngIf="use.address">{{use.address.city}}</td>
+        
+        </tr>
+        </table>
+</div>
+
