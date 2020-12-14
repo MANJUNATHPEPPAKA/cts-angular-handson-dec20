@@ -9,6 +9,6 @@ export class UserListComponent {
 
 
   name="MANJUNATH";
-  namearray=["c","d","e"];
+  nameArray=["c","d","e"];
 
 }

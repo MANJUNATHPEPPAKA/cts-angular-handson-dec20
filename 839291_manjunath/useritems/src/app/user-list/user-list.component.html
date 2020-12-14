@@ -1,2 +1,17 @@
+<div>
+
 <p>user-list works!{{name}}</p>
-<app-user-item></app-user-item>
+
+<h3> this is the parent </h3>
+<div style="text-align: center;">
+
+    <app-user-item [username]="name"></app-user-item>
+</div>
+
+
+
+
+<div *ngFor="let item of nameArray">
+    <app-user-item [username]="item"></app-user-item>
+</div>
+</div>

@@ -1,0 +1,12 @@
+<p>event-binding works!</p>
+
+<input type="text" #un><br/>
+
+<input type="password" #pas>
+
+
+
+<button (click)=handleClick(un.value,un.pas)>Send</button>
+<h3>Username {{username}}&&&Password  {{password}}</h3>
+
+<app-property-binding></app-property-binding>

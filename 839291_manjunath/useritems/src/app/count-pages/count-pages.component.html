@@ -1,0 +1,35 @@
+
+<div>
+    
+<p>count-pages works!</p>
+
+<h3>Parent Counter</h3>
+
+
+<div>
+    <app-likes-pages  [username] = "name"
+                        (likesCount) = "likes=$event"
+                         (dislikesCount) = "dislikes=$event">
+    </app-likes-pages>
+    <h1>Number of likes : <span style="color: green;">{{likes}}</span></h1>
+    <h1>Number of dislikes : <span style="color: red;">{{dislikes}}</span></h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
