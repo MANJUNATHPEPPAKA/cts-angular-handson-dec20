@@ -8,6 +8,15 @@ import { Component, EventEmitter,Input,OnInit, Output } from '@angular/core';
 export class LikesPagesComponent {
 @Input()
 username:String=undefined;
+@Input()
+likesafterclear:number=undefined;
+
+
+
+
+
+@Input()
+dislikesafterclear:number=undefined;
 likes:number=1;
 dislikes:number=1;
 
@@ -18,18 +27,30 @@ likesCount : EventEmitter<number> = new EventEmitter<number>();
 dislikesCount : EventEmitter<number> = new EventEmitter<number>();
 
 likeOnClick(){
+  if(this.likesafterclear==0)
+  {
+    this.likes=1;
+    this.likesafterclear=undefined;
+  }
   this.likesCount.emit(this.likes++);
 }
 
 dislikeOnClick()
 {
+  if(this.dislikesafterclear==0)
+  {
+
+
+
+    this.dislikes=1;
+    this.dislikesafterclear=undefined;
+
+  }
   this.dislikesCount.emit(this.dislikes++);
 }
 
-clearOnClick(){
-  this.likesCount.emit(this.likes =0);
-  this.dislikesCount.emit(this.dislikes = 0);
-}
+
+
 
 }
 
